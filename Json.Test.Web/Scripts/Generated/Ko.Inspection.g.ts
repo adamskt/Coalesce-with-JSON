@@ -13,7 +13,6 @@ module ViewModels {
         // Observables
         public inspectionId: KnockoutObservable<number | null> = ko.observable(null);
         public parentFieldWork: KnockoutObservable<ViewModels.FieldWork | null> = ko.observable(null);
-        public _MetaData: KnockoutObservable<string | null> = ko.observable(null);
         public metaData: KnockoutObservable<ViewModels.AuditMetaData | null> = ko.observable(null);
         
         /** 
@@ -30,7 +29,6 @@ module ViewModels {
             } else {
                 this.parentFieldWork()!.loadFromDto(data.parentFieldWork);
             }
-            this._MetaData(data._MetaData);
             if (!this.metaData()){
                 this.metaData(new AuditMetaData(data.metaData, this));
             } else {
@@ -44,7 +42,6 @@ module ViewModels {
             var dto: any = {};
             
             dto.inspectionId = this.inspectionId();
-            dto._MetaData = this._MetaData();
             
             return dto;
         }

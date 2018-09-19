@@ -18,7 +18,6 @@ namespace Json.Test.Web.Models
         public bool? LiveAuditQuestion2 { get; set; }
         public long? InspectionId { get; set; }
         public Json.Test.Web.Models.FieldWorkDtoGen ParentFieldWork { get; set; }
-        public string _MetaData { get; set; }
         public Json.Test.Web.Models.AuditMetaDataDtoGen MetaData { get; set; }
 
         /// <summary>
@@ -34,7 +33,6 @@ namespace Json.Test.Web.Models
             this.LiveAuditQuestion1 = obj.LiveAuditQuestion1;
             this.LiveAuditQuestion2 = obj.LiveAuditQuestion2;
             this.InspectionId = obj.InspectionId;
-            this._MetaData = obj._MetaData;
 
             this.ParentFieldWork = obj.ParentFieldWork.MapToDto<Json.Test.Data.Models.FieldWork, FieldWorkDtoGen>(context, tree?[nameof(this.ParentFieldWork)]);
 
@@ -55,7 +53,6 @@ namespace Json.Test.Web.Models
             entity.LiveAuditQuestion1 = LiveAuditQuestion1;
             entity.LiveAuditQuestion2 = LiveAuditQuestion2;
             entity.InspectionId = (InspectionId ?? entity.InspectionId);
-            entity._MetaData = _MetaData;
         }
     }
 }

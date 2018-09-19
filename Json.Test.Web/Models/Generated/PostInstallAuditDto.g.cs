@@ -18,7 +18,6 @@ namespace Json.Test.Web.Models
         public bool? PostInstallQuestion2 { get; set; }
         public long? InspectionId { get; set; }
         public Json.Test.Web.Models.FieldWorkDtoGen ParentFieldWork { get; set; }
-        public string _MetaData { get; set; }
         public Json.Test.Web.Models.AuditMetaDataDtoGen MetaData { get; set; }
 
         /// <summary>
@@ -34,7 +33,6 @@ namespace Json.Test.Web.Models
             this.PostInstallQuestion1 = obj.PostInstallQuestion1;
             this.PostInstallQuestion2 = obj.PostInstallQuestion2;
             this.InspectionId = obj.InspectionId;
-            this._MetaData = obj._MetaData;
 
             this.ParentFieldWork = obj.ParentFieldWork.MapToDto<Json.Test.Data.Models.FieldWork, FieldWorkDtoGen>(context, tree?[nameof(this.ParentFieldWork)]);
 
@@ -55,7 +53,6 @@ namespace Json.Test.Web.Models
             entity.PostInstallQuestion1 = PostInstallQuestion1;
             entity.PostInstallQuestion2 = PostInstallQuestion2;
             entity.InspectionId = (InspectionId ?? entity.InspectionId);
-            entity._MetaData = _MetaData;
         }
     }
 }

@@ -28,7 +28,6 @@ module ViewModels {
         public postInstallQuestion2: KnockoutObservable<boolean | null> = ko.observable(null);
         public inspectionId: KnockoutObservable<number | null> = ko.observable(null);
         public parentFieldWork: KnockoutObservable<ViewModels.FieldWork | null> = ko.observable(null);
-        public _MetaData: KnockoutObservable<string | null> = ko.observable(null);
         public metaData: KnockoutObservable<ViewModels.AuditMetaData | null> = ko.observable(null);
         
         
@@ -79,7 +78,6 @@ module ViewModels {
             // The rest of the objects are loaded now.
             this.postInstallQuestion1(data.postInstallQuestion1);
             this.postInstallQuestion2(data.postInstallQuestion2);
-            this._MetaData(data._MetaData);
             if (this.coalesceConfig.onLoadFromDto()){
                 this.coalesceConfig.onLoadFromDto()(this as any);
             }
@@ -95,7 +93,6 @@ module ViewModels {
             
             dto.postInstallQuestion1 = this.postInstallQuestion1();
             dto.postInstallQuestion2 = this.postInstallQuestion2();
-            dto._MetaData = this._MetaData();
             
             return dto;
         }
@@ -143,7 +140,6 @@ module ViewModels {
             
             self.postInstallQuestion1.subscribe(self.autoSave);
             self.postInstallQuestion2.subscribe(self.autoSave);
-            self._MetaData.subscribe(self.autoSave);
             
             if (newItem) {
                 self.loadFromDto(newItem, true);

@@ -19,7 +19,6 @@ module ListViewModels {
             postInstallQuestion1?: string;
             postInstallQuestion2?: string;
             inspectionId?: string;
-            _MetaData?: string;
         } | null = null;
         
         /** The namespace containing all possible values of this.dataSource. */

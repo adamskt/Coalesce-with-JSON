@@ -19,7 +19,6 @@ module ListViewModels {
             liveAuditQuestion1?: string;
             liveAuditQuestion2?: string;
             inspectionId?: string;
-            _MetaData?: string;
         } | null = null;
         
         /** The namespace containing all possible values of this.dataSource. */
