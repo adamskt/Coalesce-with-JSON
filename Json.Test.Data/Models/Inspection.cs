@@ -11,7 +11,7 @@ namespace Json.Test.Data.Models
 
         public FieldWork ParentFieldWork { get; set; }
 
-        [Hidden]
+        [InternalUse]
         public string _MetaData { get; set; }
 
         [NotMapped]
