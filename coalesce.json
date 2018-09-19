@@ -1,0 +1,8 @@
+{
+  "webProject": {
+    "projectFile": "./Json.Test.Web/Json.Test.Web.csproj"
+  },
+  "dataProject": {
+    "projectFile": "./Json.Test.Data/Json.Test.Data.csproj"
+  }
+}
